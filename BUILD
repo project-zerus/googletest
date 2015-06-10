@@ -5,7 +5,6 @@ cc_library(
   testonly = 1,
   visibility = ["//visibility:public"],
   includes = [
-    "gtest-1.7.0",
     "gtest-1.7.0/include",
   ],
   srcs = [
