@@ -7,17 +7,11 @@ cc_library(
   includes = [
     "gtest-1.7.0/include",
   ],
-  hdrs = [
-    'gtest-1.7.0/include/gtest/gtest.h',
-    'gtest-1.7.0/src/gtest-internal-inl.h',
-    'gtest-1.7.0/src/gtest.cc',
-    'gtest-1.7.0/src/gtest-death-test.cc',
-    'gtest-1.7.0/src/gtest-filepath.cc',
-    'gtest-1.7.0/src/gtest-port.cc',
-    'gtest-1.7.0/src/gtest-printers.cc',
-    'gtest-1.7.0/src/gtest-test-part.cc',
-    'gtest-1.7.0/src/gtest-typed-test.cc',
-  ],
+  hdrs = glob([
+    'gtest-1.7.0/include/**/*.h',
+    'gtest-1.7.0/src/*.h',
+    'gtest-1.7.0/src/*.cc',
+  ]),
   srcs = [
     'gtest-1.7.0/src/gtest-all.cc',
   ],
